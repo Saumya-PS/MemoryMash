@@ -8,17 +8,11 @@
     "dev": "nodemon src/server.js"
   },
   "dependencies": {
-<<<<<<< HEAD
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-=======
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
->>>>>>> b98689152d1d7371058e792a28d4023f77269b73
     "mongoose": "^8.5.1"
   },
   "devDependencies": {

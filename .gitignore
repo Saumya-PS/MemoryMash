@@ -1,17 +1,7 @@
 node_modules/
-<<<<<<< HEAD
 dist/
 build/
 .env
 .env.local
 *.log
 .DS_Store
-=======
-.env
-.env.*
-!.env.example
-dist/
-build/
-.vite/
-.DS_Store
->>>>>>> b98689152d1d7371058e792a28d4023f77269b73

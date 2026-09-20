@@ -2,6 +2,7 @@ const asyncHandler = require("../middlewares/asyncHandler");
 const ApiError = require("../utils/ApiError");
 const ApiResponse = require("../utils/ApiResponse");
 const User = require("../models/user.model");
+const Memory = require("../models/memory.model");
 
 
 
@@ -101,11 +102,12 @@ const getCurrentUser = asyncHandler(async (req, res) => {
 
 
 // DELETE /api/v1/auth/account
-// Memories, collections and conversations get cleaned up here too
-// once those models exist (added in a later commit).
+// Collections and conversations get cleaned up here too once those
+// models exist (added in later commits).
 
 const deleteAccount = asyncHandler(async (req, res) => {
 
+    await Memory.deleteMany({ user: req.user._id });
     await User.findByIdAndDelete(req.user._id);
 
     return res.status(200).json(
