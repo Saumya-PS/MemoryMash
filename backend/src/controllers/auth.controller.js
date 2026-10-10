@@ -7,6 +7,7 @@ const Memory = require("../models/memory.model");
 
 
 
+
 // POST /api/v1/auth/register
 
 const registerUser = asyncHandler(async (req, res) => {
@@ -89,6 +90,9 @@ const loginUser = asyncHandler(async (req, res) => {
 
 
 
+
+
+
 // GET /api/v1/auth/me
 
 const getCurrentUser = asyncHandler(async (req, res) => {
@@ -98,6 +102,7 @@ const getCurrentUser = asyncHandler(async (req, res) => {
     );
 
 });
+
 
 
 
@@ -115,6 +120,7 @@ const deleteAccount = asyncHandler(async (req, res) => {
     );
 
 });
+
 
 
 

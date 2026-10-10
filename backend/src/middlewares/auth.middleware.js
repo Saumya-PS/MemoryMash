@@ -6,6 +6,8 @@ const User = require("../models/user.model");
 
 
 
+
+
 // Verifies the access token and attaches the user to req.user.
 
 const verifyJWT = asyncHandler(async (req, res, next) => {
@@ -34,6 +36,8 @@ const verifyJWT = asyncHandler(async (req, res, next) => {
     next();
 
 });
+
+
 
 
 

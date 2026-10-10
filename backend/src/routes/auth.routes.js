@@ -12,7 +12,9 @@ const router = express.Router();
 
 
 
+
 router.post("/register", registerUser);
+
 
 
 
@@ -25,6 +27,8 @@ router.get("/me", verifyJWT, getCurrentUser);
 
 
 router.delete("/account", verifyJWT, deleteAccount);
+
+
 
 
 

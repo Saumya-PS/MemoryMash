@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "MemoryMesh",
+  "version": "1.0.0",
+  "description": "Save webpages with AI summaries and connect them with what you already know.",
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "MemoryMesh"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["config.js", "content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["http://localhost:8000/*"],
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}

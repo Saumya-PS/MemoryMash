@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 
 
+
 // Core data model - a single saved webpage or text selection.
 
 const memorySchema = new mongoose.Schema(
@@ -75,9 +76,12 @@ const memorySchema = new mongoose.Schema(
 
 
 
+
 memorySchema.index({ title: "text", tags: "text", topics: "text" });
 memorySchema.index({ user: 1, createdAt: -1 });
 memorySchema.index({ collection: 1 });
+
+
 
 
 
@@ -104,6 +108,8 @@ memorySchema.pre("save", function fillDomain(next) {
 
 
 
+
+
 // Short preview of the saved content, used anywhere a card/list view
 // needs a quick snippet instead of the full page text.
 
@@ -120,6 +126,8 @@ memorySchema.set("toJSON", { virtuals: true });
 
 
 
+
+
 // Quick per-user fetch, newest first. Controllers use this instead of
 // repeating the same sort/filter everywhere.
 
@@ -128,7 +136,6 @@ memorySchema.statics.findByUser = function findByUser(userId) {
     return this.find({ user: userId }).sort({ createdAt: -1 });
 
 };
-
 
 
 
@@ -142,6 +149,8 @@ memorySchema.statics.search = function search(userId, query) {
     ).sort({ score: { $meta: "textScore" } });
 
 };
+
+
 
 
 

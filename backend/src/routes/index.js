@@ -1,20 +1,16 @@
 const express = require("express");
 
 const authRoutes = require("./auth.routes");
+const memoryRoutes = require("./memory.routes");
+const searchRoutes = require("./search.routes");
 
 const router = express.Router();
-
-
-
 
 router.use("/auth", authRoutes);
 
 
+router.use("/memories", memoryRoutes);
 
-// memories, collections, search and conversations routers get
-// mounted here as those pieces are built out.
-
-
-
+router.use("/search", searchRoutes);
 
 module.exports = router;

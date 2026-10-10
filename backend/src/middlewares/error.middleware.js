@@ -3,11 +3,14 @@ const ApiError = require("../utils/ApiError");
 
 
 
+
+
 // Formats every thrown error into a consistent JSON response.
 
 const errorMiddleware = (err, req, res, next) => {
 
     let error = err;
+
 
 
 
@@ -51,11 +54,13 @@ const errorMiddleware = (err, req, res, next) => {
 
 
 
+
     console.error(`[ERROR] ${req.method} ${req.originalUrl} -> ${error.message}`);
 
     if (process.env.NODE_ENV !== "production") {
         console.error(error.stack);
     }
+
 
 
 

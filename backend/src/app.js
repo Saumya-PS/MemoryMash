@@ -20,7 +20,6 @@ app.use(express.urlencoded({ extended: true, limit: "5mb" }));
 
 
 
-
 // Route: GET /health
 // Simple health check used to confirm the server is running.
 app.get("/health", (req, res) => {
@@ -34,7 +33,12 @@ app.get("/health", (req, res) => {
 
 
 
+
+
 app.use("/api/v1", apiRouter);
+
+
+
 
 
 
@@ -42,7 +46,6 @@ app.use("/api/v1", apiRouter);
 // those pieces are built out.
 
 app.use(errorMiddleware);
-
 
 
 

@@ -33,6 +33,9 @@ const userSchema = new mongoose.Schema(
 
 
 
+
+
+
 // Hashes the password before saving, only if it changed.
 
 userSchema.pre("save", async function hashPassword(next) {
@@ -46,6 +49,7 @@ userSchema.pre("save", async function hashPassword(next) {
     next();
 
 });
+
 
 
 
@@ -75,7 +79,6 @@ userSchema.methods.generateAccessToken = function generateAccessToken() {
     );
 
 };
-
 
 
 

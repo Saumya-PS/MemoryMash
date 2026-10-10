@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>MemoryMesh</title>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+    <div class="app">
+
+        <header class="header">
+            <span class="logo">✦ MemoryMesh</span>
+            <button id="openDashboardBtn" class="link-btn">Dashboard</button>
+        </header>
+
+        <!-- Shown when the user is not logged in -->
+        <section id="loginView" class="view">
+            <h2>Log in</h2>
+            <input id="loginEmail" type="email" placeholder="Email" />
+            <input id="loginPassword" type="password" placeholder="Password" />
+            <button id="loginBtn" class="primary-btn">Log in</button>
+            <p id="loginError" class="error-text"></p>
+            <p class="hint">Don't have an account? Register on the dashboard.</p>
+        </section>
+
+        <!-- Shown when the user is logged in -->
+        <section id="saveView" class="view hidden">
+
+            <div class="user-row">
+                <span id="userEmail"></span>
+                <button id="logoutBtn" class="link-btn">Log out</button>
+            </div>
+
+            <h2>Save this page</h2>
+
+            <label>Title</label>
+            <input id="pageTitle" type="text" />
+
+            <label>Why I'm saving this</label>
+            <textarea id="userIntent" rows="2" placeholder="e.g. reference for my auth project"></textarea>
+
+            <label>Notes</label>
+            <textarea id="userNotes" rows="2" placeholder="Optional personal notes"></textarea>
+
+            <label>Collection</label>
+            <select id="collectionSelect">
+                <option value="">No collection</option>
+            </select>
+
+            <button id="saveMemoryBtn" class="primary-btn">Save Memory</button>
+
+            <p id="saveStatus" class="status-text"></p>
+
+        </section>
+
+    </div>
+
+    <script src="../config.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

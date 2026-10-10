@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 
 
 
+
+
 // Opens a single connection to MongoDB using the URI from the .env
 // file. Called once when the server starts (see server.js).
 
@@ -22,6 +24,7 @@ const connectDB = async () => {
     }
 
 };
+
 
 
 
