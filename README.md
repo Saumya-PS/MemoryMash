@@ -12,8 +12,8 @@ backend, and a React dashboard.
 ## Setup
 
 ```
-cd backend && npm install && cp .env.example .env && npm run dev
-cd dashboard && npm install && cp .env.example .env && npm run dev
+cd backend && npm install && npm run dev
+cd dashboard && npm install && npm run dev
 ```
 
 Load `extension/` in Chrome via chrome://extensions (Developer mode, Load unpacked).
