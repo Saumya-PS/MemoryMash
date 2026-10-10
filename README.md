@@ -5,5 +5,15 @@ backend, and a React dashboard.
 
 ## Status
 
-Project scaffolding only. Backend boots an Express app and connects to MongoDB.
-Dashboard and extension are set up as empty folders for now — more to come.
+- Backend: auth, memory CRUD, AI analysis, embeddings, related-memory search
+- Dashboard: login/register, memories list + search, memory details, settings
+- Extension: popup to log in and save the current page
+
+## Setup
+
+```
+cd backend && npm install && cp .env.example .env && npm run dev
+cd dashboard && npm install && cp .env.example .env && npm run dev
+```
+
+Load `extension/` in Chrome via chrome://extensions (Developer mode, Load unpacked).
